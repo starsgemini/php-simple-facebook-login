@@ -17,7 +17,7 @@
         private $code           = '';
         private $context        = '';
         private $accessToken    = null;
-
+        private $homePage       = '';
         /**
          * Class constructor
          * @param array config
@@ -27,6 +27,7 @@
             $this->appId        = $config['app_id'];
             $this->redirectUri  = urlencode($config['redirect_uri']);
             $this->appSecret    = $config['app_secret'];
+            $this->homePage     = $config['home_page'];
 
             # generate scope
             foreach ($config['scope'] as $permission){
@@ -58,7 +59,7 @@
             $response = json_decode(file_get_contents($exchangeUrl,false,$this->context));
             if (isset($response->access_token)){
                 $this->accessToken = $response->access_token;
-                header("Location: example.php?access_token={$this->accessToken}");
+                header("Location: {$this->homePage}?access_token={$this->accessToken}");
             }else{
                 echo json_encode($response);
             }

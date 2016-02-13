@@ -8,8 +8,9 @@
 
     return
         [
-            'app_id'        => '',
-            'app_secret'    => '',
-            'redirect_uri'  => 'http://localhost/yourapp/redirect.php',
-            'scope'         => ['public_profile','user_friends','email']
+            'app_id'        => '599687893521786',
+            'app_secret'    => '0a488e501bb302714b4f02ceae7f0cd9',
+            'redirect_uri'  => 'http://localhost/php-facebook-login/redirect.php',
+            'scope'         => ['public_profile','user_friends','email'],
+            'home_page'     => 'example.php'
         ];

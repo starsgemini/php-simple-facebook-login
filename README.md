@@ -23,6 +23,8 @@
   
   "scope" are the permissions you need. https://developers.facebook.com/docs/facebook-login/permissions
   
+  "home_page" page you will redirected after login.
+  
   
 ## EXAMPLE CODE
     <?php
